@@ -1,7 +1,7 @@
 import qrcode
 import datetime
 # Link for website
-input_data = "https://forms.gle/Nran4R1QjpNuaFYB8"
+input_data = "https://forms.gle/Dyh7QnRovZ1297ZT9"
 #Creating an instance of qrcode
 qr = qrcode.QRCode(
         version=1,
@@ -11,4 +11,4 @@ qr.add_data(input_data)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
 
-img.save(f'qrcodes/{datetime.datetime.now()}.png')
+img.save("qrcodes\{time}.png".format(time=datetime.date.today()))  
